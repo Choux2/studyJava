@@ -2,7 +2,7 @@ package study0802;
 
 public class test57_2 {
 
-    public static void numbering(int init, int limit){
+    public static void numbering(int init, int limit) {
         int i = init;
         while (i < limit) {
             System.out.println(i);
