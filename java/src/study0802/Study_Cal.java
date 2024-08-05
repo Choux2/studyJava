@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Study_Cal {
 
-    public static void main(String[] args) {
+    public static void main() {
 
         Scanner sc = new Scanner(System.in);
         int i, j, k;
@@ -21,6 +21,11 @@ public class Study_Cal {
             str = sc.next();
         }
 
+//        while (!str.equals("+") || !str.equals("-") || !str.equals("*") || !str.equals("/")) {
+//            System.out.print("연산자를 다시 입력하세요:");
+//            str = sc.next();
+//        }
+
         System.out.print("숫자를 입력하세요:");
         j = sc.nextInt();
         System.out.print("= ");
@@ -34,14 +39,16 @@ public class Study_Cal {
             System.out.println(mul(i,j));
         } else if (str.equals("/")) {
             System.out.println(div(i,j));
-        } else {
-
         }
+
+
+
+
         System.out.println("");
         System.out.print("계속하시겠습니까? 1. 네 2. 아니오 : ");
         k = sc.nextInt();
         if (k==1){
-            main(args);
+            main();
         } else if (k==2) {
             System.out.println("계산기 종료");
         }
