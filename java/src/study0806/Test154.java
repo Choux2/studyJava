@@ -24,9 +24,9 @@ public class Test154 {
         System.out.println(A.containsAll(B)); //false: B는 A의 부분집합이 아니다
         System.out.println(A.containsAll(C)); //true: C는 A의 부분집합이다
 
-//        A.addAll(B); //합집합
-//        A.retainAll(B); //교집합
-        A.removeAll(B); //차집합
+//        A.addAll(B); //합집합(A∪B)
+//        A.retainAll(B); //교집합(A∩B)
+//        A.removeAll(B); //차집합(A-B)
 
         Iterator hi = (Iterator) A.iterator();
         while(hi.hasNext()) {

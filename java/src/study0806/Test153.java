@@ -5,8 +5,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class Test153 {
-    //List 내가 입력한 모든 값 저장
-    //Set 중복값은 제외하고 고유한 값들만 저장
+    //List 내가 입력한 모든 값을 순서대로 저장 (중복 가능)
+    //Set 중복값은 제외하고 고유한 값들만 저장 (순서 상관 x)
     public static void main(String[] args) {
         HashSet<Integer> A = new HashSet<Integer>();
         A.add(1);
