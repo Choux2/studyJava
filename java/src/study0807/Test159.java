@@ -30,9 +30,14 @@ public class Test159 {
         computers.add(new Computer(3233, "graphittie"));
         Iterator i = computers.iterator();
         System.out.println("before");
-        while(i.hasNext()) {
-            System.out.println(i.next());
+//        while(i.hasNext()) {
+//            System.out.println(i.next());
+//        }
+        for (Computer c : computers) {
+            System.out.println(c);
         }
+
+
         Collections.sort(computers);
         System.out.println("\nafter");
         i = computers.iterator();
