@@ -40,7 +40,7 @@ public class MegaCoffee {
         this.price = price;
     }
 
-    MegaCoffee() {
+    public MegaCoffee() {
 
     }
 
