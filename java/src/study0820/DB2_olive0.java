@@ -1,6 +1,10 @@
 package study0820;
 
+import study0820VO.Olive0;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DB2_olive0 {
     public static void main(String[] args) throws SQLException {
@@ -25,19 +29,35 @@ public class DB2_olive0 {
 
         ResultSet resultSet = statement.executeQuery("select * from olive0");
 
+        List<Olive0> olive0List = new ArrayList<>();
+
         while(resultSet.next()) {
-                String type = resultSet.getString("type");
-                String brand = resultSet.getString("brand");
-                String name = resultSet.getString("name");
-                String color = resultSet.getString("color");
-                int price = resultSet.getInt("price");
 
-                System.out.println(type+"/"+brand+""+name+""+color+"/"+price+"원");
+            Olive0 olive0 = new Olive0();
 
-                resultSet.close();
-                statement.close();
-                connection.close();
+            String type = resultSet.getString("type");
+            String brand = resultSet.getString("brand");
+            String name = resultSet.getString("name");
+            String color = resultSet.getString("color");
+            int price = resultSet.getInt("price");
+
+            olive0.setType(type);
+            olive0.setBrand(brand);
+            olive0.setName(name);
+            olive0.setColor(color);
+            olive0.setPrice(price);
+
+            olive0List.add(olive0);
+
+//            System.out.println(type+"/"+brand+""+name+""+color+"/"+price+"원");
         }
 
+        for(Olive0 olive0 : olive0List) {
+            System.out.println(olive0);
+        }
+
+        resultSet.close();
+        statement.close();
+        connection.close();
     }
 }
