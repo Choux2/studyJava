@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class menu_DB {
+public class Menu_DB {
     public static void main(String[] args) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/delivery_db";
         String userName = "root";
